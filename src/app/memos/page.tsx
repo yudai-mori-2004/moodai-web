@@ -1,24 +1,44 @@
 // app/memos/page.tsx
-import Link from 'next/link'
+import { SectionTitle } from '@/components/ui/SectionTitle'
+import { MemoCard } from '@/components/sections/MemoCard'
+import { Box } from '@mui/material'
+
+export const metadata = {
+    title: 'Memos | moodai',
+    description: 'moodaiの技術メモや覚え書き',
+}
+
+interface MemoItem {
+    slug: string
+    title: string
+    date: string
+    tags?: string[]
+    excerpt?: string
+}
 
 export default function MemosPage() {
-    const notes = [
-        { slug: 'first-note', title: 'First Note' },
-        { slug: 'second-note', title: 'Second Note' },
+    const memos: MemoItem[] = [
+        {
+            slug: 'first-note',
+            title: 'サイトをつくりました',
+            date: '2025-05-03',
+            tags: ['Next.js', 'Vercel'],
+            excerpt: 'GWの中盤、ハッカソンの締め切りまであと10日を切りそうな忙しいタイミングで作ったサイトです。'
+        },
     ]
 
     return (
-        <section>
-            <h2 className="text-2xl font-semibold mb-4">Memos</h2>
-            <ul className="list-disc ml-6">
-                {notes.map(({ slug, title }) => (
-                    <li key={slug}>
-                        <Link href={`/memos/${slug}`} className="text-blue-600">
-                            {title}
-                        </Link>
-                    </li>
+        <div>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8">
+                <SectionTitle className="mb-2 sm:mb-0">Memos</SectionTitle>
+                <p className="text-muted-foreground bg-secondary/50 px-4 py-2 rounded-full shadow-sm inline-block">技術メモや覚え書き</p>
+            </div>
+
+            <Box sx={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                {memos.map((memo) => (
+                    <MemoCard key={memo.slug} memo={memo} />
                 ))}
-            </ul>
-        </section>
+            </Box>
+        </div>
     )
 }
