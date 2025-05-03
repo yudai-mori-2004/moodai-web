@@ -3,7 +3,7 @@
 // app/providers.tsx
 import { ReactNode } from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
-import { darkTheme, theme } from './theme';
+import { darkTheme } from './theme';
 
 interface ProvidersProps {
     children: ReactNode;

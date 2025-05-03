@@ -1,6 +1,6 @@
 // components/ui/Card.tsx
 import React, { ReactNode } from 'react';
-import { Paper, Box } from '@mui/material';
+import { Paper } from '@mui/material';
 
 interface CardProps {
     children: ReactNode;
