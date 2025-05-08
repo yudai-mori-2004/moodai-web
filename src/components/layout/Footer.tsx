@@ -1,9 +1,8 @@
 // components/layout/Footer.tsx
 'use client';
 import React from 'react';
-import { Box, Typography, Link, Stack, IconButton, Tooltip } from '@mui/material';
+import { Box, Typography, Link, Stack, Tooltip } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
-import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function Footer() {
     return (
