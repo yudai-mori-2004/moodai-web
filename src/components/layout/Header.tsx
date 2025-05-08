@@ -16,7 +16,6 @@ import {
     List,
     ListItem,
     ListItemText,
-    Container,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -49,7 +48,7 @@ export default function Header() {
                     borderBottom: 'none',
                 }}
             >
-                <Container maxWidth="lg">
+                <Box sx={{ maxWidth: '1200px', mx: 'auto', width: '100%' }}>
                     <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 0, sm: 0 } }}>
                         <Typography
                             variant="h4"
@@ -64,7 +63,7 @@ export default function Header() {
                             }}
                         >
                             <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                moodaiのオフィシャルサイト
+                               About me
                             </Link>
                         </Typography>
 
@@ -148,7 +147,7 @@ export default function Header() {
                             </Box>
                         )}
                     </Toolbar>
-                </Container>
+                </Box>
             </AppBar>
             <Box sx={{
                 height: '1px',
