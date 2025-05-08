@@ -5,7 +5,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Box, Typography, Button, Grid, IconButton, Tooltip } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import TwitterIcon from '@mui/icons-material/x';
+import TwitterIcon from '@mui/icons-material/Twitter'; // ここを修正 - x から Twitter に変更
 import TelegramIcon from '@mui/icons-material/Telegram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
