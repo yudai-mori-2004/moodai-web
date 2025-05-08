@@ -14,7 +14,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 
 export const metadata = {
-  title: 'サイトをつくりました | moodai',
+  title: 'サイトをつくりました。 | moodai',
 };
 
 export default function FirstMemoPage() {
