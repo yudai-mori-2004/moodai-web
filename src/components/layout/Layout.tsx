@@ -3,14 +3,8 @@
 // components/layout/Layout.tsx
 import React, { ReactNode } from 'react';
 import Box from '@mui/material/Box';
-import dynamic from 'next/dynamic';
 import Header from './Header';
 import Footer from './Footer';
-
-// Dynamically import Container with SSR disabled to prevent hydration errors
-const Container = dynamic(() => import('@mui/material/Container'), {
-    ssr: false
-});
 
 interface LayoutProps {
     children: ReactNode;
