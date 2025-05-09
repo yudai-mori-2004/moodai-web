@@ -2,38 +2,14 @@
 import { SectionTitle } from '@/components/ui/SectionTitle'
 import { MemoCard } from '@/components/sections/MemoCard'
 import { Box } from '@mui/material'
+import { memos } from '@/lib/memos'
 
 export const metadata = {
     title: 'Memos | moodai',
     description: 'moodaiの技術メモや覚え書き',
 }
 
-interface MemoItem {
-    slug: string
-    title: string
-    date: string
-    tags?: string[]
-    excerpt?: string
-}
-
 export default function MemosPage() {
-    const memos: MemoItem[] = [
-        {
-            slug: 'first-note',
-            title: 'サイトをつくりました',
-            date: '2025-05-03',
-            tags: ['Next.js', 'Vercel'],
-            excerpt: 'GWの中盤、ハッカソンの締め切りまであと10日を切りそうな忙しいタイミングで作ったサイトです。'
-        },
-        {
-            slug: 'second-note',
-            title: '次の目標について',
-            date: '2025-05-10',
-            tags: ['Next.js', 'Vercel'],
-            excerpt: 'GWの中盤、ハッカソンの締め切りまであと10日を切りそうな忙しいタイミングで作ったサイトです。'
-        },
-    ]
-
     return (
         <div>
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8">
@@ -42,7 +18,7 @@ export default function MemosPage() {
             </div>
 
             <Box sx={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                {memos.map((memo) => (
+                {memos.reverse().map((memo) => (
                     <MemoCard key={memo.slug} memo={memo} />
                 ))}
             </Box>
