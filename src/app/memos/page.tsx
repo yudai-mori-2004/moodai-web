@@ -25,6 +25,13 @@ export default function MemosPage() {
             tags: ['Next.js', 'Vercel'],
             excerpt: 'GWの中盤、ハッカソンの締め切りまであと10日を切りそうな忙しいタイミングで作ったサイトです。'
         },
+        {
+            slug: 'second-note',
+            title: '次の目標について',
+            date: '2025-05-10',
+            tags: ['Next.js', 'Vercel'],
+            excerpt: 'GWの中盤、ハッカソンの締め切りまであと10日を切りそうな忙しいタイミングで作ったサイトです。'
+        },
     ]
 
     return (
