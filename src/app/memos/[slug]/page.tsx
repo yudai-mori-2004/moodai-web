@@ -15,8 +15,10 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { memos } from '@/lib/memos';
 
 
-export default async function MemoPage({params}:{params:{slug: string}}) {
-  const memo = memos.find(m => m.slug == params.slug);
+export default async function MemoPage({params}:{params:Promise<{slug: string}>}) {
+  const { slug } = await params;
+
+  const memo = memos.find(m => m.slug == slug);
   if(!memo) return "No contents";
 
   // Memo date
