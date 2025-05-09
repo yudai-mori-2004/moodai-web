@@ -1,4 +1,4 @@
-// app/memos/first-note/page.tsx
+// app/memos/[slug]/page.tsx
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -14,13 +14,8 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { memos } from '@/lib/memos';
 
-export const metadata = {
-  title: 'サイトをつくりました。 | moodai',
-};
 
-export default function FirstMemoPage({params}:{
-  params:{slug: string}
-}) {
+export default async function MemoPage({params}:{params:{slug: string}}) {
   const memo = memos.find(m => m.slug == params.slug);
   if(!memo) return "No contents";
 
